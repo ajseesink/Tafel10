@@ -13,6 +13,7 @@
 		65133D42259B658E00B5FA14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65133D40259B658E00B5FA14 /* Main.storyboard */; };
 		65133D4E259B658E00B5FA14 /* Tafel10Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65133D4D259B658E00B5FA14 /* Tafel10Tests.swift */; };
 		65133D59259B658E00B5FA14 /* Tafel10UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65133D58259B658E00B5FA14 /* Tafel10UITests.swift */; };
+		65133D6A259CA0A600B5FA14 /* ChangeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65133D69259CA0A600B5FA14 /* ChangeText.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		65133D54259B658E00B5FA14 /* Tafel10UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tafel10UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		65133D58259B658E00B5FA14 /* Tafel10UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tafel10UITests.swift; sourceTree = "<group>"; };
 		65133D5A259B658E00B5FA14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65133D69259CA0A600B5FA14 /* ChangeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeText.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			children = (
 				65133D3A259B658C00B5FA14 /* AppDelegate.swift */,
 				65133D3C259B658C00B5FA14 /* ViewController.swift */,
+				65133D69259CA0A600B5FA14 /* ChangeText.swift */,
 				65133D3E259B658E00B5FA14 /* Assets.xcassets */,
 				65133D40259B658E00B5FA14 /* Main.storyboard */,
 				65133D43259B658E00B5FA14 /* Info.plist */,
@@ -254,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				65133D3D259B658C00B5FA14 /* ViewController.swift in Sources */,
+				65133D6A259CA0A600B5FA14 /* ChangeText.swift in Sources */,
 				65133D3B259B658C00B5FA14 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
