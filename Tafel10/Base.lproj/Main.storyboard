@@ -200,9 +200,9 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bGH-sH-Zsd">
-                                <rect key="frame" x="29" y="150" width="333" height="64"/>
+                                <rect key="frame" x="31" y="175" width="266" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" lineBreakMode="truncatingTail" title="Label" id="Ibb-oa-Apt">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" borderStyle="border" title="Label" id="Ibb-oa-Apt">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -233,6 +233,33 @@
                                     <action selector="pushedButton2:" target="XfG-lQ-9wD" id="ORF-93-5gs"/>
                                 </connections>
                             </button>
+                            <scrollView fixedFrame="YES" borderType="line" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mmB-GB-GEZ">
+                                <rect key="frame" x="31" y="32" width="266" height="135"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <clipView key="contentView" drawsBackground="NO" id="66f-pT-ZFb">
+                                    <rect key="frame" x="1" y="1" width="264" height="133"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" spellingCorrection="YES" smartInsertDelete="YES" id="IFT-L6-9GP">
+                                            <rect key="frame" x="0.0" y="0.0" width="264" height="133"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <size key="minSize" width="264" height="133"/>
+                                            <size key="maxSize" width="266" height="10000000"/>
+                                            <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                        </textView>
+                                    </subviews>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="z6Y-C2-4MX">
+                                    <rect key="frame" x="-100" y="-100" width="240" height="16"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="ZVf-7c-Kx4">
+                                    <rect key="frame" x="249" y="1" width="16" height="133"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
                         </subviews>
                     </view>
                     <connections>
@@ -243,6 +270,7 @@
                         <outlet property="resetButton" destination="pzO-rz-er5" id="qcx-Xi-Du5"/>
                         <outlet property="tafelLabel" destination="bGH-sH-Zsd" id="2dj-fZ-6HW"/>
                         <outlet property="textLabel" destination="bGH-sH-Zsd" id="ayZ-Kl-SEo"/>
+                        <outlet property="textLabel2" destination="mmB-GB-GEZ" id="ieu-xl-wUL"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

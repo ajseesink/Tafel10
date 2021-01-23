@@ -9,10 +9,13 @@ import Cocoa
 
 class ViewController: NSViewController {
    
+    var textInLabel: String = ""
+    var teller: Int = 0
     
     @IBOutlet weak var resetButton: NSButton!
     @IBOutlet weak var textLabel: NSTextField!
         
+    @IBOutlet weak var textLabel2: NSScrollView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -45,9 +48,14 @@ class ViewController: NSViewController {
     
     @IBAction func pushedButton2(_ sender: Any) {
        // setLabel(inputText: "The Button is pushed")
-        let textname = mySetLabel(tekst: "Hello World")
-        setLabel(inputText: textname)
+        let textname = mySetLabel(tekst: "Hello World\n")
+        teller += 1
+        textInLabel =  "\(teller) + \(textname)"
+        //setLabel(inputText: textInLabel)
+        textLabel2.documentView!.insertText(textInLabel)
     }
+    
+    
     
 }
 
