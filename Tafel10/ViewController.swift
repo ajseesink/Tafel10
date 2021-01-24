@@ -9,13 +9,11 @@ import Cocoa
 
 class ViewController: NSViewController {
    
-    var textInLabel: String = ""
-    var teller: Int = 0
     
-    @IBOutlet weak var resetButton: NSButton!
+    @IBOutlet weak var inputVeld: NSTextField!
     @IBOutlet weak var textLabel: NSTextField!
-        
     @IBOutlet weak var textLabel2: NSScrollView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,19 +24,9 @@ class ViewController: NSViewController {
     override var representedObject: Any? {
         didSet {
         // Update the view, if already loaded.
-            
         }
     }
 
-   // Reset button is pushed here.
-    @IBAction func pushedResetButton(_ sender: Any) {
-        // var name = textLabel.stringValue
-        // name = "Button Reset is pushed"
-        // textLabel.stringValue = name
-        // textLabel.stringValue = "Button Reset is pushed"
-        setLabel(inputText: "The reset Button is pushed")
-    }
-    
     // Call this function to change text in label.
     func setLabel(inputText: String){
        var name = textLabel.stringValue
@@ -46,17 +34,29 @@ class ViewController: NSViewController {
        textLabel.stringValue = name
          }
     
-    @IBAction func pushedButton2(_ sender: Any) {
-       // setLabel(inputText: "The Button is pushed")
-        let textname = mySetLabel(tekst: "Hello World\n")
-        teller += 1
-        textInLabel =  "\(teller) + \(textname)"
-        //setLabel(inputText: textInLabel)
-        textLabel2.documentView!.insertText(textInLabel)
+   // Reset button is pushed here.
+    @IBAction func pushedButtonReset(_ sender: Any) {
+        setLabel(inputText: "De reset Button is ingedrukt")
+        inputVeld.stringValue = ""
+        textLabel2.documentView!.selectAll(self)
+        textLabel2.documentView!.deleteBackward(self)
     }
     
-    
-    
+    // Uitvoeren button is pushed here
+    @IBAction func pushedButtonUitvoeren(_ sender: Any) {
+        let invoer = Int(inputVeld.stringValue) ?? 0
+        
+        if invoer == 0 {
+          setLabel(inputText: "Geef een getal als waarde in...")
+        }
+        else {
+          setLabel(inputText: "De tafel van \(invoer) wordt uitgevoerd")
+          for a in 1...10 {
+            let textname = mySetLabel(tekst: "\(a)", tafel: "\(invoer)")
+            textLabel2.documentView!.insertText(textname)
+          }
+        }
+    }
 }
 
 
