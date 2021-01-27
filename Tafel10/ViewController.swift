@@ -44,15 +44,18 @@ class ViewController: NSViewController {
     
     // Uitvoeren button is pushed here
     @IBAction func pushedButtonUitvoeren(_ sender: Any) {
-        let invoer = Int(inputVeld.stringValue) ?? 0
+        // let invoer = Int(inputVeld.stringValue) ?? 0
+        let invoer = Int(inputVeld.stringValue)
         
-        if invoer == 0 {
+        if invoer == nil {
           setLabel(inputText: "Geef een getal als waarde in...")
         }
         else {
-          setLabel(inputText: "De tafel van \(invoer) wordt uitgevoerd")
+            // setLabel(inputText: "De tafel van (String(describing: invoer)) wordt uitgevoerd")
+            setLabel(inputText: "De tafel van " + String(invoer!) + " wordt uitgevoerd")
           for a in 1...10 {
-            let textname = mySetLabel(tekst: "\(a)", tafel: "\(invoer)")
+            // let textname = mySetLabel(tekst: "\(a)", tafel: "\(String(describing: invoer))")
+            let textname = mySetLabel(tekst: "\(a)", tafel: String(invoer!))
             textLabel2.documentView!.insertText(textname)
           }
         }
